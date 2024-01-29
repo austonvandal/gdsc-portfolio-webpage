@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auston's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b194875dca.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm<span> Auston</span> from SRM</h1>
+            </div>
+        </div>
+    </div>
+    <!-------about------>
+
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Welcome to my digital space! I'm Auston, a first-year student at SRM, passionately diving into the world of front-end development. Fueled by discipline and a relentless work ethic, I am on a journey to master the art of coding. Join me as I transform ideas into seamless, visually captivating experiences on the web. Let's build something extraordinary together.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>UI?UX </span><br>Designing web/app interfaces</li>
+                            <li><span>Web development </span><br>Web app development</li>
+                            <li><span>App development </span><br>Buiding Android apps</li>
+                            <li><span>Figma Designing </span><br>Posters, posts and webpages</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2021 </span><br>Coding and designing </li>
+                            <li><span>2019-2021 </span><br>Speacialization in cryptography</li>
+                            <li><span>2017-2019 </span><br>Team leader in marketing</li>
+                            <li><span>2016-2017 </span><br>Team leader in management</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2023 </span><br>B.Tech CSE at SRM </li>
+                            <li><span>2021 </span><br>B.Tech Cyber Security at Harvard</li>
+                            <li><span>2018 </span><br>MBA at IIM</li>
+                            <li><span>2016 </span><br>BBA at IIM</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------------services-->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1> 
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Web Design</h2>
+                    <p>My web designs are perfect and very creative and has the best reviews</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/Ui</h2>
+                    <p>My designs for UI has been remarkable and it is rare and new</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-figma"></i>
+                    <h2>Figma Design</h2>
+                    <p>I can design Posters, Posts for social media with meticulous efforts</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> austonvandal@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 9361001990</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/auston_vandal/"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://twitter.com/AustonSF1"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/auston-8a07731b2/"><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                    <a href="images/My Resume.pdf"download class="btn  btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email"placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit"class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){        
+        tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){        
+        tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+    </body>
+    </html>
